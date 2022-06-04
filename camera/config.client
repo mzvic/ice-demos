@@ -1,0 +1,18 @@
+
+Camera.Proxy=hello:tcp -p 10000:udp -p 10000:ssl -p 10001
+
+Ice.Default.Host=localhost
+
+Ice.Warn.Connections=1
+
+#
+# SSL Configuration
+#
+Ice.Plugin.IceSSL=IceSSL:createIceSSL
+IceSSL.DefaultDir=../../../certs
+IceSSL.CAs=cacert.pem
+IceSSL.CertFile=client.p12
+IceSSL.Password=password
+IceSSL.Keychain=../../../certs/client.keychain
+IceSSL.KeychainPassword=password
+
