@@ -9,10 +9,10 @@ Ice.Warn.Connections=1
 # SSL Configuration
 #
 Ice.Plugin.IceSSL=IceSSL:createIceSSL
-IceSSL.DefaultDir=../../../certs
+IceSSL.DefaultDir=../certs
 IceSSL.CAs=cacert.pem
 IceSSL.CertFile=server.p12
 IceSSL.Password=password
-IceSSL.Keychain=../../../certs/server.keychain
+IceSSL.Keychain=../certs/server.keychain
 IceSSL.KeychainPassword=password
 

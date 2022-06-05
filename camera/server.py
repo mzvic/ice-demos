@@ -7,7 +7,7 @@ Ice.loadSlice('camera.ice')
 import Demo
 
 class cameraI(Demo.video): #video = interface in camera.ice
-    def take_photo(self, current = None):
+    def takephoto(self, current):
         pygame.camera.init()
         pygame.camera.list_cameras() #Camera detected or not
         cam = pygame.camera.Camera("FaceTime HD Camera",(640,480))
@@ -29,5 +29,6 @@ with Ice.initialize(sys.argv, "config.server") as communicator:
     adapter.add(cameraI(), Ice.stringToIdentity("camera"))
     adapter.activate()
     communicator.waitForShutdown()
+
 
 

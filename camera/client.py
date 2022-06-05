@@ -17,8 +17,8 @@ def run(communicator):
             sys.stdout.write("==>")
             sys.stdout.flush()
             c = sys.stdin.readline().strip()
-            if c == 'take photo':
-                twoway.take_photo()
+            if c == 't':
+                twoway.takephoto()
             else:
                 print("unknown command `" + c + "\'")
                 menu()
