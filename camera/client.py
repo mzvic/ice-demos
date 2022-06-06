@@ -4,7 +4,7 @@ Ice.loadSlice('camera.ice')
 import Demo
 
 def run(communicator):
-    twoway = Demo.videoPrx.checkedCast(
+    twoway = Demo.videoPrx.checkedCast( #videoPrx = interfacePrx (interface proxy)
         communicator.propertyToProxy('Camera.Proxy').ice_twoway().ice_secure(False))
     if not twoway:
         print("invalid proxy")
@@ -40,7 +40,4 @@ x: exit
 
 
 with Ice.initialize(sys.argv, "config.client") as communicator:
-    if len(sys.argv) > 1:
-        print(sys.argv[0] + ": too many arguments")
-        sys.exit(1)
     run(communicator)
