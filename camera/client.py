@@ -1,4 +1,5 @@
 import sys, Ice
+from datetime import datetime
 Ice.loadSlice('camera.ice')
 import Demo
 
@@ -19,6 +20,10 @@ def run(communicator):
             c = sys.stdin.readline().strip()
             if c == 't':
                 twoway.takephoto()
+            elif c == 's':
+                twoway.shutdown()
+            elif c == 'x':
+                pass
             else:
                 print("unknown command `" + c + "\'")
                 menu()
@@ -29,6 +34,8 @@ def menu():
     print("""
 usage:
 t: take photo
+s: shutdown server
+x: exit
 """)
 
 

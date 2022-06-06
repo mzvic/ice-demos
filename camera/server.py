@@ -1,3 +1,6 @@
+import os
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+from datetime import datetime
 import sys, Ice
 import signal
 import pygame
@@ -6,6 +9,7 @@ import pygame.camera
 Ice.loadSlice('camera.ice')
 import Demo
 
+
 class cameraI(Demo.video): #video = interface in camera.ice
     def takephoto(self, current):
         pygame.camera.init()
@@ -13,7 +17,7 @@ class cameraI(Demo.video): #video = interface in camera.ice
         cam = pygame.camera.Camera("FaceTime HD Camera",(640,480))
         cam.start()
         img = cam.get_image()
-        pygame.image.save(img,"filename.jpg")
+        pygame.image.save(img,f"{datetime.today().strftime('%Y-%m-%d %H:%M:%S')}.jpg")
 
     def shutdown(self, current):
         current.adapter.getCommunicator().shutdown()
