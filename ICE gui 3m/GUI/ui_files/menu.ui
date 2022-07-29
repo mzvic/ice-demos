@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Grap</class>
+ <widget class="QMainWindow" name="Grap">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>363</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Graphical User Interface -  Observatorio 21 centímetros</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>641</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Bienvenido al asistente para manejo de&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;parámetros en la ejecución del programa de obtención&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;de datos astronómicos. Esta interfaz le permitirá ingresar los valores&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;específicos que desee. Si algún valor no es asignado, se&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;tomará el valor por defecto. Los parámetros ingresados serán asignados como&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;valores a las variables que configuran la comunicación y presentación de &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;los datos obtenidos.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuObservaci_n">
+    <property name="title">
+     <string>Observación</string>
+    </property>
+    <addaction name="actionNueva_observacion"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuDatos">
+    <property name="title">
+     <string>Datos</string>
+    </property>
+    <addaction name="actionEditar_codigo_fuente"/>
+    <addaction name="actionEditar_codigo_GUI"/>
+    <addaction name="actionVer_datos_y_graficos"/>
+   </widget>
+   <widget class="QMenu" name="menuAntena">
+    <property name="title">
+     <string>Antena</string>
+    </property>
+    <addaction name="actionEME_System"/>
+    <addaction name="actionEME_System_Setup"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionVer_Manual"/>
+    <addaction name="actionVer_Proyecto_HI"/>
+   </widget>
+   <addaction name="menuObservaci_n"/>
+   <addaction name="menuDatos"/>
+   <addaction name="menuAntena"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNueva_observacion">
+   <property name="text">
+    <string>Nueva observacion</string>
+   </property>
+  </action>
+  <action name="actionEME_System">
+   <property name="text">
+    <string>EME System</string>
+   </property>
+  </action>
+  <action name="actionEME_System_Setup">
+   <property name="text">
+    <string>EME System Setup</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionEditar_codigo_fuente">
+   <property name="text">
+    <string>Editar codigo fuente</string>
+   </property>
+  </action>
+  <action name="actionEditar_codigo_GUI">
+   <property name="text">
+    <string>Editar codigo GUI</string>
+   </property>
+  </action>
+  <action name="actionVer_datos_y_graficos">
+   <property name="text">
+    <string>Ver datos y graficos</string>
+   </property>
+  </action>
+  <action name="actionVer_Manual">
+   <property name="text">
+    <string>Ver Manual</string>
+   </property>
+  </action>
+  <action name="actionVer_Proyecto_HI">
+   <property name="text">
+    <string>Ver Proyecto HI</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
