@@ -13,7 +13,7 @@ import Demo
 class cameraI(Demo.video): #video = interface in camera.ice
     def takephoto(self, current):
         pygame.camera.init()
-        pygame.camera.list_cameras() #Camera detected or not
+        print(pygame.camera.list_cameras()) #Camera detected or not
         cam = pygame.camera.Camera("FaceTime HD Camera",(1280,720)) #Camera name = FaceTime HD Camera, resolution = 640x480
         cam.start()
         img = cam.get_image()

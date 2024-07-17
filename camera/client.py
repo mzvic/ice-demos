@@ -23,6 +23,7 @@ def run(communicator):
             elif c == 's':
                 twoway.shutdown()
             elif c == 'x':
+                twoway.shutdown()
                 pass
             else:
                 print("unknown command `" + c + "\'")
